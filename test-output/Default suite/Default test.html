@@ -1,0 +1,195 @@
+<html>
+<head>
+<title>TestNG:  Default test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Default test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>8/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Mar 14 08:59:53 IST 2022</td>
+</tr>
+<tr><td>Total time:</td><td>227 seconds (227943 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runner.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User should not be able to see contractos list with invalid city name", "Optional[Search Box functionality]"</td>
+<td><div><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;LAPTOP-OFMRSGL7&apos;, ip: &apos;192.168.43.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.13&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [227726ad0c1c208b710d6158012dfe8c, clickElement {id=7bf28cff-bb94-431d-b3a2-a5e27f62a74b}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\saleem\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:58745}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58745/devtoo..., se:cdpVersion: 99.0.4844.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (227726ad0c1c208b710d6158012dfe8c)] -&gt; id: js-locationIcon]
+Session ID: 227726ad0c1c208b710d6158012dfe8c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy29.click(Unknown Source)
+	at pageobjects.ContractorPage.ClickOnLocationbutton(ContractorPage.java:68)
+	at stepdefinitions.Search_box.user_click_on_search_button(Search_box.java:132)
+	at ?.User click on search button(file:///C:/Users/saleem/eclipse-workspace/FindaContractor/src/test/java/featurefile/search_box.feature:38)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1432888450", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1432888450'><pre>org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=99.0.4844.51)
+For documentation on this error, please visit: https://selenium.dev/exceptions/#stale_element_reference
+Build info: version: &apos;4.1.1&apos;, revision: &apos;e8fcc2cecf&apos;
+System info: host: &apos;LAPTOP-OFMRSGL7&apos;, ip: &apos;192.168.43.58&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.13&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [227726ad0c1c208b710d6158012dfe8c, clickElement {id=7bf28cff-bb94-431d-b3a2-a5e27f62a74b}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.51, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\saleem\AppData\Loc...}, goog:chromeOptions: {debuggerAddress: localhost:58745}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:58745/devtoo..., se:cdpVersion: 99.0.4844.51, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on WINDOWS (227726ad0c1c208b710d6158012dfe8c)] -&gt; id: js-locationIcon]
+Session ID: 227726ad0c1c208b710d6158012dfe8c
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:543)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:251)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
+	at jdk.internal.reflect.GeneratedMethodAccessor2.invoke(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:52)
+	at com.sun.proxy.$Proxy29.click(Unknown Source)
+	at pageobjects.ContractorPage.ClickOnLocationbutton(ContractorPage.java:68)
+	at stepdefinitions.Search_box.user_click_on_search_button(Search_box.java:132)
+	at ?.User click on search button(file:///C:/Users/saleem/eclipse-workspace/FindaContractor/src/test/java/featurefile/search_box.feature:38)
+</pre></div></td>
+<td>17</td>
+<td>runner.RunnerClass@1cf6d1be</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='runner.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runner.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User should not be able to see contractos list with invalid zipcod", "Optional[Search Box functionality]"</td>
+<td></td>
+<td>13</td>
+<td>runner.RunnerClass@1cf6d1be</td></tr>
+<tr>
+<td title='runner.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runner.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User should be able to search contractos list with valid city name", "Optional[Search Box functionality]"</td>
+<td></td>
+<td>33</td>
+<td>runner.RunnerClass@1cf6d1be</td></tr>
+<tr>
+<td title='runner.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runner.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User should able to select radio buttons in RATING AND REVIEW", "Optional[Features of Contractor page should work properly]"</td>
+<td></td>
+<td>20</td>
+<td>runner.RunnerClass@1cf6d1be</td></tr>
+<tr>
+<td title='runner.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runner.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User should able to click on call back button", "Optional[Features of Contractor page should work properly]"</td>
+<td></td>
+<td>23</td>
+<td>runner.RunnerClass@1cf6d1be</td></tr>
+<tr>
+<td title='runner.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runner.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can enter invalid mobile number but he/she should not take call backs", "Optional[Features of Contractor page should work properly]"</td>
+<td></td>
+<td>39</td>
+<td>runner.RunnerClass@1cf6d1be</td></tr>
+<tr>
+<td title='runner.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runner.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User should able to select radio buttons in CATEGORY", "Optional[Features of Contractor page should work properly]"</td>
+<td></td>
+<td>28</td>
+<td>runner.RunnerClass@1cf6d1be</td></tr>
+<tr>
+<td title='runner.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runner.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User can enter valid mobile number to take call backs successfully", "Optional[Features of Contractor page should work properly]"</td>
+<td></td>
+<td>23</td>
+<td>runner.RunnerClass@1cf6d1be</td></tr>
+<tr>
+<td title='runner.RunnerClass.runScenario()'><b>runScenario</b><br>Test class: runner.RunnerClass<br>Test method: Runs Cucumber Scenarios<br>Parameters: "User should be able to search contractos list with valid zipcod", "Optional[Search Box functionality]"</td>
+<td></td>
+<td>20</td>
+<td>runner.RunnerClass@1cf6d1be</td></tr>
+</table><p>
+</body>
+</html>
