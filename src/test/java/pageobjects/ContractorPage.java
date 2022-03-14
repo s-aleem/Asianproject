@@ -16,7 +16,7 @@ public class ContractorPage {
 		PageFactory.initElements(driver,this);
 		
 	}
-	
+	// hello
 	@FindBy(xpath="//div/input[@name='PINCODE_LOCATOR']")
 	private WebElement searchbox;
 	
